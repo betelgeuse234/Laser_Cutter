@@ -77,14 +77,22 @@ SECTIONS
 
         . = ALIGN(4);
         _efixed = .;            /* End of text section */
-    } > ram
+    } > rom
 
-    . = ALIGN(8);
+    /* .ARM.exidx is sorted, so has to go in its own output section.  */
+    PROVIDE_HIDDEN (__exidx_start = .);
+    .ARM.exidx :
+    {
+      *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+    } > rom
+    PROVIDE_HIDDEN (__exidx_end = .);
+
+    . = ALIGN(4);
     _etext = .;
 
     .relocate : AT (_etext)
     {
-        . = ALIGN(8);
+        . = ALIGN(4);
         _srelocate = .;
         *(.ramfunc .ramfunc.*);
         *(.data .data.*);
@@ -115,25 +123,6 @@ SECTIONS
         _estack = .;
     } > ram
 
-    /* heap section */
-    .heap (NOLOAD):
-    {
-        . = ALIGN(8);
-         _sheap = .;
-        . = . + HEAP_SIZE;
-        . = ALIGN(8);
-        _eheap = .;
-    } > ram
-
-    /* .ARM.exidx is sorted, so has to go in its own output section.  */
-    PROVIDE_HIDDEN (__exidx_start = .);
-    .ARM.exidx :
-    {
-      *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-    } > ram
-    PROVIDE_HIDDEN (__exidx_end = .);
-
     . = ALIGN(4);
     _end = . ;
-    _ram_end_ = ORIGIN(ram) + LENGTH(ram) -1 ;
 }

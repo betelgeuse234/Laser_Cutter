@@ -5,7 +5,7 @@
     <ProjectVersion>7.0</ProjectVersion>
     <ToolchainName>com.Atmel.ARMGCC.C</ToolchainName>
     <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
-    <avrdevice>ATSAM4SA16B</avrdevice>
+    <avrdevice>ATSAM4E16E</avrdevice>
     <avrdeviceseries>none</avrdeviceseries>
     <OutputType>Executable</OutputType>
     <Language>C</Language>
@@ -20,10 +20,10 @@
     <OverrideVtor>false</OverrideVtor>
     <CacheFlash>true</CacheFlash>
     <ProgFlashFromRam>true</ProgFlashFromRam>
-    <RamSnippetAddress />
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
     <UncachedRange />
     <preserveEEPROM>true</preserveEEPROM>
-    <OverrideVtorValue />
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
     <BootSegment>2</BootSegment>
     <eraseonlaunchrule>0</eraseonlaunchrule>
     <AsfFrameworkConfig>
@@ -38,6 +38,7 @@
         </dependencies>
       </framework-data>
     </AsfFrameworkConfig>
+    <avrtool />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
@@ -54,7 +55,7 @@
   </armgcc.compiler.symbols.DefSymbols>
   <armgcc.compiler.directories.IncludePaths>
     <ListValues>
-      <Value>%24(PackRepoDir)\atmel\SAM4S_DFP\1.0.56\sam4s\include</Value>
+      <Value>%24(PackRepoDir)\atmel\SAM4E_DFP\1.1.57\ic.sam4e\include</Value>
       <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
@@ -72,16 +73,16 @@
     </ListValues>
   </armgcc.linker.libraries.LibrarySearchPaths>
   <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
-  <armgcc.linker.miscellaneous.LinkerFlags>-Tsam4sa16b_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
+  <armgcc.linker.miscellaneous.LinkerFlags>-Tsam4e16e_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
   <armgcc.assembler.general.IncludePaths>
     <ListValues>
-      <Value>%24(PackRepoDir)\atmel\SAM4S_DFP\1.0.56\sam4s\include</Value>
+      <Value>%24(PackRepoDir)\atmel\SAM4E_DFP\1.1.57\ic.sam4e\include</Value>
       <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
     </ListValues>
   </armgcc.assembler.general.IncludePaths>
   <armgcc.preprocessingassembler.general.IncludePaths>
     <ListValues>
-      <Value>%24(PackRepoDir)\atmel\SAM4S_DFP\1.0.56\sam4s\include</Value>
+      <Value>%24(PackRepoDir)\atmel\SAM4E_DFP\1.1.57\ic.sam4e\include</Value>
       <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
     </ListValues>
   </armgcc.preprocessingassembler.general.IncludePaths>
@@ -103,7 +104,7 @@
   </armgcc.compiler.symbols.DefSymbols>
   <armgcc.compiler.directories.IncludePaths>
     <ListValues>
-      <Value>%24(PackRepoDir)\atmel\SAM4S_DFP\1.0.56\sam4s\include</Value>
+      <Value>%24(PackRepoDir)\atmel\SAM4E_DFP\1.1.57\ic.sam4e\include</Value>
       <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
@@ -122,17 +123,17 @@
     </ListValues>
   </armgcc.linker.libraries.LibrarySearchPaths>
   <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
-  <armgcc.linker.miscellaneous.LinkerFlags>-Tsam4sa16b_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
+  <armgcc.linker.miscellaneous.LinkerFlags>-Tsam4e16e_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
   <armgcc.assembler.general.IncludePaths>
     <ListValues>
-      <Value>%24(PackRepoDir)\atmel\SAM4S_DFP\1.0.56\sam4s\include</Value>
+      <Value>%24(PackRepoDir)\atmel\SAM4E_DFP\1.1.57\ic.sam4e\include</Value>
       <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
     </ListValues>
   </armgcc.assembler.general.IncludePaths>
   <armgcc.assembler.debugging.DebugLevel>Default (-g)</armgcc.assembler.debugging.DebugLevel>
   <armgcc.preprocessingassembler.general.IncludePaths>
     <ListValues>
-      <Value>%24(PackRepoDir)\atmel\SAM4S_DFP\1.0.56\sam4s\include</Value>
+      <Value>%24(PackRepoDir)\atmel\SAM4E_DFP\1.1.57\ic.sam4e\include</Value>
       <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
     </ListValues>
   </armgcc.preprocessingassembler.general.IncludePaths>
@@ -141,10 +142,10 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Device_Startup\startup_sam4s.c">
+    <Compile Include="Device_Startup\startup_sam4e.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Device_Startup\system_sam4s.c">
+    <Compile Include="Device_Startup\system_sam4e.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="main.c">
@@ -155,16 +156,16 @@
     <Folder Include="Device_Startup\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Device_Startup\sam4sa16b_flash.ld">
+    <None Include="Device_Startup\sam4e16e_flash.ld">
       <SubType>compile</SubType>
     </None>
-    <None Include="Device_Startup\sam4sa16b_sram.ld">
+    <None Include="Device_Startup\sam4e16e_sram.ld">
       <SubType>compile</SubType>
     </None>
-    <None Include="Device_Startup\sam4s_flash.ld">
+    <None Include="Device_Startup\sam4e_flash.ld">
       <SubType>compile</SubType>
     </None>
-    <None Include="Device_Startup\sam4s_sram.ld">
+    <None Include="Device_Startup\sam4e_sram.ld">
       <SubType>compile</SubType>
     </None>
   </ItemGroup>
