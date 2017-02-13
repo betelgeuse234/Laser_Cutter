@@ -1,4 +1,4 @@
-update=2/12/2017 8:38:58 PM
+update=2/12/2017 10:48:41 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -59,3 +59,4 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=C:/Users/John/Documents/Products/Laser_Cutter/Hardware/KiCad/Sch_Lib/common
+LibName31=C:/Users/John/Documents/Products/KiCAD_Common/newFritzLib
