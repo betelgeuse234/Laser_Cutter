@@ -142,18 +142,72 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Application\Source\main.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Device_Startup\startup_sam4e.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Device_Startup\system_sam4e.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="main.c">
+    <Compile Include="Drivers\Headers\adc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Headers\pwm.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Headers\rtc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Headers\spi.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Headers\timer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Headers\twi.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Headers\uart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Source\adc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Source\pwm.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Source\registers.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Source\rtc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Source\spi.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Source\timer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Source\twi.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Source\uart.c">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Application\Headers" />
+    <Folder Include="Application\Source" />
     <Folder Include="Device_Startup\" />
+    <Folder Include="Drivers" />
+    <Folder Include="Drivers\Headers" />
+    <Folder Include="Drivers\Source" />
+    <Folder Include="Middleware" />
+    <Folder Include="Application" />
+    <Folder Include="Middleware\Headers" />
+    <Folder Include="Middleware\Source" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Device_Startup\sam4e16e_flash.ld">
