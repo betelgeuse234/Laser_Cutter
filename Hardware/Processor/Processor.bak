@@ -2883,9 +2883,9 @@ Wire Wire Line
 Wire Wire Line
 	6150 2825 5675 2825
 Wire Wire Line
-	5675 1375 5675 2825
+	5675 2825 5675 1375
 Wire Wire Line
-	1950 1375 5675 1375
+	5675 1375 1950 1375
 Wire Wire Line
 	6950 2250 6950 3250
 Connection ~ 7100 2175
@@ -3366,9 +3366,9 @@ Wire Wire Line
 Wire Wire Line
 	10800 7225 10800 7275
 Wire Wire Line
-	4475 4900 4475 4950
+	4475 4950 4475 4900
 Wire Wire Line
-	3425 4900 4475 4900
+	4475 4900 3425 4900
 Wire Wire Line
 	4475 5000 4475 5050
 Wire Wire Line
@@ -4024,11 +4024,32 @@ Wire Wire Line
 Wire Wire Line
 	7875 2500 7875 3100
 Connection ~ 8450 2500
-Text GLabel 1425 5200 2    47   Output ~ 0
+Text GLabel 1450 5200 2    47   Output ~ 0
 +5V_UART
 Wire Wire Line
-	1425 5200 1350 5200
+	1450 5200 1400 5200
 Wire Wire Line
-	1350 5200 1350 5425
-Connection ~ 1350 5425
+	1400 5200 1400 5425
+Connection ~ 1400 5425
+$Comp
+L C C?
+U 1 1 58BB728B
+P 8775 8800
+F 0 "C?" H 8800 8875 50  0000 L CNN
+F 1 "100nF" H 8800 8725 50  0000 L CNN
+F 2 "" H -1512 3725 50  0001 C CNN
+F 3 "" H -1550 3875 50  0001 C CNN
+	1    8775 8800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8775 8650 8775 8450
+Wire Wire Line
+	8775 8450 9075 8450
+Connection ~ 9075 8450
+Wire Wire Line
+	8775 8950 8775 9125
+Wire Wire Line
+	8775 9125 9075 9125
+Connection ~ 9075 9125
 $EndSCHEMATC
