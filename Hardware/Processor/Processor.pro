@@ -1,4 +1,4 @@
-update=2/12/2017 10:48:41 PM
+update=2/13/2017 7:56:47 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -60,3 +60,13 @@ LibName28=contrib
 LibName29=valves
 LibName30=C:/Users/John/Documents/Products/Laser_Cutter/Hardware/KiCad/Sch_Lib/common
 LibName31=C:/Users/John/Documents/Products/KiCAD_Common/newFritzLib
+[schematic_editor]
+version=1
+PageLayoutDescrFile=C:/Users/John/Documents/Products/Laser_Cutter/Hardware/KiCad/default_layout.kicad_wks
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=60
+ERC_TestSimilarLabels=1
