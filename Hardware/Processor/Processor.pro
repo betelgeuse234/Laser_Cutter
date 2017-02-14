@@ -1,4 +1,4 @@
-update=2/13/2017 7:56:47 PM
+update=2/13/2017 8:14:17 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -63,7 +63,7 @@ LibName31=C:/Users/John/Documents/Products/KiCAD_Common/newFritzLib
 [schematic_editor]
 version=1
 PageLayoutDescrFile=C:/Users/John/Documents/Products/Laser_Cutter/Hardware/KiCad/default_layout.kicad_wks
-PlotDirectoryName=
+PlotDirectoryName=PDFs/
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=
