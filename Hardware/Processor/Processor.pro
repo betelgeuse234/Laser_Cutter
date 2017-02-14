@@ -1,4 +1,4 @@
-update=2/12/2017 3:38:36 PM
+update=2/13/2017 9:55:13 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -27,7 +27,7 @@ NetIExt=net
 version=1
 [eeschema]
 version=1
-LibDir=../Processor
+LibDir=../KiCad/Sch_Lib;../KiCad/Sch_Lib
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -58,3 +58,15 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
+LibName30=C:/Users/John/Documents/Products/Laser_Cutter/Hardware/KiCad/Sch_Lib/common
+LibName31=C:/Users/John/Documents/Products/KiCAD_Common/newFritzLib
+[schematic_editor]
+version=1
+PageLayoutDescrFile=C:/Users/John/Documents/Products/Laser_Cutter/Hardware/KiCad/default_layout.kicad_wks
+PlotDirectoryName=PDFs/
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=60
+ERC_TestSimilarLabels=1
