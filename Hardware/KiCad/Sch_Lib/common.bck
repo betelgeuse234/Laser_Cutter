@@ -4,4 +4,8 @@ $CMP +5V_EXT
 K POWER, PWR
 $ENDCMP
 #
+$CMP +5V_UART
+K POWER, PWR
+$ENDCMP
+#
 #End Doc Library
