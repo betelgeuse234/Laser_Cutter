@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:Processor-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,7 +29,6 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:common
-LIBS:newFritzLib
 LIBS:Processor-cache
 EELAYER 26 0
 EELAYER END
@@ -47,7 +45,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L ATSAM4E16E U2
+L ATSAM4E16E-RESCUE-Processor U2
 U 1 1 58A11173
 P 6850 6450
 F 0 "U2" H 5200 9500 50  0000 C CNN
