@@ -29,6 +29,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:common
+LIBS:newFritzLib
 LIBS:Processor-cache
 EELAYER 26 0
 EELAYER END
@@ -4162,4 +4163,6 @@ Wire Wire Line
 	8775 8450 8850 8450
 Wire Wire Line
 	9225 9125 9225 9100
+Text Notes 1450 -325 0    394  ~ 0
+Remove local KiCad Libs from past projects
 $EndSCHEMATC
