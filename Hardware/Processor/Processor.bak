@@ -2398,25 +2398,14 @@ F 3 "" H -200 -400 50  0001 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L CONN_01X02 J1
-U 1 1 58AC4E21
-P 925 6875
-F 0 "J1" H 925 7025 50  0000 C CNN
-F 1 "5V" H 1050 6875 50  0000 C CNN
-F 2 "" H -525 -575 50  0001 C CNN
-F 3 "" H -525 -575 50  0001 C CNN
-	1    925  6875
-	-1   0    0    -1  
-$EndComp
-$Comp
 L GND #PWR057
 U 1 1 58AC6385
-P 1175 6975
-F 0 "#PWR057" H -875 -75 50  0001 C CNN
-F 1 "GND" H 1180 6802 50  0000 C CNN
-F 2 "" H -875 175 50  0001 C CNN
-F 3 "" H -875 175 50  0001 C CNN
-	1    1175 6975
+P 1175 7075
+F 0 "#PWR057" H -875 25  50  0001 C CNN
+F 1 "GND" H 1180 6902 50  0000 C CNN
+F 2 "" H -875 275 50  0001 C CNN
+F 3 "" H -875 275 50  0001 C CNN
+	1    1175 7075
 	1    0    0    -1  
 $EndComp
 Text Label 1525 8325 0    47   ~ 0
@@ -3963,7 +3952,7 @@ Wire Wire Line
 Wire Wire Line
 	1125 6925 1175 6925
 Wire Wire Line
-	1175 6925 1175 6975
+	1175 6925 1175 7075
 Wire Wire Line
 	1125 6825 1750 6825
 Wire Wire Line
@@ -4165,4 +4154,18 @@ Wire Wire Line
 	9225 9125 9225 9100
 Text Notes 1450 -325 0    394  ~ 0
 Remove local KiCad Libs from past projects
+$Comp
+L CONN_01X03 J1
+U 1 1 58A68985
+P 925 6925
+F 0 "J1" H 875 7125 50  0000 L CNN
+F 1 "5V" H 1000 7025 50  0000 L CNN
+F 2 "" H 75  -300 50  0001 C CNN
+F 3 "" H 75  -300 50  0001 C CNN
+	1    925  6925
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1175 7025 1125 7025
+Connection ~ 1175 7025
 $EndSCHEMATC
