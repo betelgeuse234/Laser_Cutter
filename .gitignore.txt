@@ -1,9 +1,0 @@
-# Atmel Studio
-*.atsuo
-
-# KiCad
-*.bak
-*.kicad_pcb-bak
-
-# Office Temp Files
-~$*
