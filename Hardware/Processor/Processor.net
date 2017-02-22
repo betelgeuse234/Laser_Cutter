@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:\Users\John\Documents\Products\Laser_Cutter\Hardware\Processor\Processor.sch)
-    (date "2/21/2017 10:45:28 PM")
+    (date "2/21/2017 11:47:08 PM")
     (tool "Eeschema (2017-02-08 revision 0dc1193)-makepkg")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -361,6 +361,7 @@
       (tstamp 58ABA0FE))
     (comp (ref Y2)
       (value 12MHz)
+      (footprint Crystals:Crystal_HC49-SD_SMD)
       (libsource (lib device) (part Crystal))
       (sheetpath (names /) (tstamps /))
       (tstamp 58A42A2C))
@@ -384,6 +385,7 @@
       (tstamp 58A46E12))
     (comp (ref Y1)
       (value 32.768kHz)
+      (footprint FritzLib:FC-135R)
       (libsource (lib device) (part Crystal))
       (sheetpath (names /) (tstamps /))
       (tstamp 58A4A1B5))
