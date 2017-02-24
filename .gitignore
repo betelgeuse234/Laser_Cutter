@@ -9,3 +9,4 @@
 ~$*
 *.kicad_pcb-bak
 Hardware/Processor/Processor.bak
+*.bak
