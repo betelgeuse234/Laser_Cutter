@@ -7,3 +7,5 @@
 
 # Office Temp Files
 ~$*
+*.kicad_pcb-bak
+Hardware/Processor/Processor.bak
