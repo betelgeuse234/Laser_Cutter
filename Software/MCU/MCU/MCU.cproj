@@ -154,6 +154,9 @@
     <Compile Include="Drivers\Headers\adc.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Drivers\Headers\gpio.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Drivers\Headers\pmc.h">
       <SubType>compile</SubType>
     </Compile>
@@ -176,6 +179,9 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Drivers\Source\adc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Source\gpio.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Drivers\Source\pmc.c">
