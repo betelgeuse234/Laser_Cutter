@@ -1,7 +1,7 @@
 (export (version D)
   (design
-    (source C:/Users/John/Documents/Products/Laser_Cutter/Hardware/Processor/Processor.sch)
-    (date "2/23/2017 10:03:54 PM")
+    (source C:\Users\John\Documents\Products\Laser_Cutter\Hardware\Processor\Processor.sch)
+    (date "2/25/2017 5:00:23 PM")
     (tool "Eeschema (2017-02-08 revision 0dc1193)-makepkg")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -1052,16 +1052,16 @@
         (pin (num 5) (name GND) (type power_in))
         (pin (num 6) (name Shield) (type passive)))))
   (libraries
+    (library (logical Processor-cache)
+      (uri C:\Users\John\Documents\Products\Laser_Cutter\Hardware\Processor\Processor-cache.lib))
+    (library (logical common)
+      (uri C:\Users\John\Documents\Products\Laser_Cutter\Hardware\KiCad\Sch_Lib\common.lib))
+    (library (logical newFritzLib)
+      (uri C:\Users\John\Documents\Products\KiCAD_Common\newFritzLib.lib))
     (library (logical conn)
       (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\conn.lib"))
     (library (logical device)
-      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\device.lib"))
-    (library (logical common)
-      (uri C:\Users\John\Documents\Products\Laser_Cutter\Hardware\KiCad\Sch_Lib\common.lib))
-    (library (logical Processor-cache)
-      (uri C:\Users\John\Documents\Products\Laser_Cutter\Hardware\Processor\Processor-cache.lib))
-    (library (logical newFritzLib)
-      (uri C:\Users\John\Documents\Products\KiCAD_Common\newFritzLib.lib)))
+      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\device.lib")))
   (nets
     (net (code 1) (name "Net-(L2-Pad1)")
       (node (ref U4) (pin 5))
