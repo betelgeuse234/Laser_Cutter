@@ -13,13 +13,16 @@ Requirements/Characteristics (assume +3.3 VDC VDDIO)
     Rise Time:                                  Min 2.2 ns
     Fall Time:                                  Min 2.2 ns
     Low-level Input Voltage:                    -0.3 to 0.99 VDC
-    High-level Input Voltage:                   2.31 to 3.6 VDC
+    High-level Input Voltage:                   1.62 to 3.6 VDC
     Internal parasitic Capacitance (standby):   5.5 typ to 6.3 pF max
     Internal Parasitic Resistance (standby):    300 Ohm typ
     Frequency (USB):                            12 MHz
     Max drift (USB):                            +/- 2500 ppm
     Nominal High Level Voltage (USB):           1.8 VDC nominal
     
+Selections to evaluate further: 
+    DSC6111CI2A-012.0000
+    2-output clock driver to source both ATSAM and Ethernet PHY clocks
 
 ===============================================================================
 DP83848 (Ethernet PHY)
