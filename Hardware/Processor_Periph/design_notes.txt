@@ -1,19 +1,25 @@
 ﻿===============================================================================
 ATSAM
 ===============================================================================
-@todo /* RTC & generic Atmel Cap/crystal info */
-Cpcb (6 mil trace, 2 layer board above gnd plane, 1.6 mm, 4mm trace) = 0.5 pF. Keep traces < 5mm and we will be ok					
-Cext = 2 × (Ccrystal - Cpara - Cpcb)		Cpara (RTC) = 0.7pF											
-Ccrystal (RTC) must be 6 to 12.5 pF			Cext (RTC) = 2 * (12.5 pF - 0.7 pF - 0.5 pF) = 22.6	
-Chosen RTC crystal: FC-135 32.7680KA-A5
+Main Oscillator
 
-@todo /* 12 MHz Crystal & Capacitor calculations */
-Cpara (12 MHz) = <0.1pF
-Cext (12 MHz) = 2 * (16 pF - 9.5 - 0.5 pF) = 12 pF
-Ccrystal (12 MHz) must be 12.5 to 17.5 pF		
-GC1200050
+Using external oscillator (must put 3-20 Mhz crystal oscillator input to Bypass Mode)
 
-@todo /* Main xtal input requirements for Atmel SAM4E */
+Requirements/Characteristics (assume +3.3 VDC VDDIO)
+    XIN Clock Frequency:                        Max 50 MHz
+    XIN Clock Period:                           Min 20 ns
+    XIN Clock High Half-period:                 Min 8 ns
+    XIN Clock Low Half-period:                  Min 8 ns
+    Rise Time:                                  Min 2.2 ns
+    Fall Time:                                  Min 2.2 ns
+    Low-level Input Voltage:                    -0.3 to 0.99 VDC
+    High-level Input Voltage:                   2.31 to 3.6 VDC
+    Internal parasitic Capacitance (standby):   5.5 typ to 6.3 pF max
+    Internal Parasitic Resistance (standby):    300 Ohm typ
+    Frequency (USB):                            12 MHz
+    Max drift (USB):                            +/- 2500 ppm
+    Nominal High Level Voltage (USB):           1.8 VDC nominal
+    
 
 ===============================================================================
 DP83848 (Ethernet PHY)
