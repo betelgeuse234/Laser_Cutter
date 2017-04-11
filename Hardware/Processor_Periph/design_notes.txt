@@ -21,7 +21,7 @@ Requirements/Characteristics (assume +3.3 VDC VDDIO)
     Nominal High Level Voltage (USB):           1.8 VDC nominal
     
 Selections to evaluate further: 
-    DSC6111CI2A-012.0000
+    DSC6111CI2A-012.0000 (Need 1.8 VDC source: https://www.digikey.com/product-detail/en/microchip-technology/MIC5365-1.8YD5-TR/576-4082-1-ND/3671750)
     2-output clock driver to source both ATSAM and Ethernet PHY clocks
 
 ===============================================================================
@@ -34,3 +34,11 @@ https://www.digikey.com/product-detail/en/abracon-llc/ASE-25.000MHZ-LC-T/535-956
 @todoSelected magnetics: J0006D01BNL
 CONN MAGJACK 1PORT 100 BASE-TX
 (meets all requirements on http://www.ti.com/product/DP83848-HT/datasheet/application_and_implementation#sllsej75780)
+Vf GLED = 2.2 typ
+Vf YLED = 2.1 typ
+Bias current: 20 mA
+
+===============================================================================
+
+===============================================================================
+
