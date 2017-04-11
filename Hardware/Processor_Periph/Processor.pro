@@ -1,4 +1,4 @@
-update=3/7/2017 10:08:00 PM
+update=4/10/2017 7:20:30 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -27,7 +27,7 @@ NetIExt=net
 version=1
 [eeschema]
 version=1
-LibDir=../KiCad/Sch_Lib;../KiCad/Sch_Lib
+LibDir=../KiCad/Sch_Lib;../KiCad/Sch_Lib;../../../Kicad_Lib
 [eeschema/libraries]
 LibName1=Processor-rescue
 LibName2=power
@@ -61,9 +61,10 @@ LibName29=contrib
 LibName30=valves
 LibName31=C:/Users/John/Documents/Products/Laser_Cutter/Hardware/KiCad/Sch_Lib/common
 LibName32=C:/Users/John/Documents/Products/KiCAD_Common/newFritzLib
+LibName33=FritzLib
 [schematic_editor]
 version=1
-PageLayoutDescrFile=C:/Users/John/Documents/Products/Laser_Cutter/Hardware/KiCad/default_layout.kicad_wks
+PageLayoutDescrFile=C:/Users/jfrit/Documents/GitHub/Laser_Cutter/Hardware/KiCad/default_layout.kicad_wks
 PlotDirectoryName=PDFs/
 SubpartIdSeparator=0
 SubpartFirstId=65
