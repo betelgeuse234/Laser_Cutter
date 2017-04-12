@@ -31,12 +31,14 @@ Selected oscillator: ASE-25.000MHZ-LC-T
 https://www.digikey.com/product-detail/en/abracon-llc/ASE-25.000MHZ-LC-T/535-9568-1-ND/1237035
 (meets all requirements on http://www.ti.com/product/DP83848-HT/datasheet/application_and_implementation#sllsej75780)
 
-@todoSelected magnetics: J0006D01BNL
+Selected magnetics: J0006D01BNL
 CONN MAGJACK 1PORT 100 BASE-TX
 (meets all requirements on http://www.ti.com/product/DP83848-HT/datasheet/application_and_implementation#sllsej75780)
 Vf GLED = 2.2 typ
 Vf YLED = 2.1 typ
 Bias current: 20 mA
+
+
 
 ===============================================================================
 
