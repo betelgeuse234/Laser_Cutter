@@ -56,14 +56,6 @@ F 3 "" H 5400 4550 50  0000 C CNN
 	1    5400 4550
 	1    0    0    -1  
 $EndComp
-Text GLabel 4900 3050 0    50   Output ~ 0
-AOUT1
-Text GLabel 4900 3250 0    50   Output ~ 0
-AOUT2
-Text GLabel 4900 3350 0    50   Output ~ 0
-BOUT2
-Text GLabel 4900 3550 0    50   Output ~ 0
-BOUT1
 $Comp
 L CONN_01X02 P1
 U 1 1 58CBDBA5
@@ -109,7 +101,7 @@ F 3 "" H 3050 4950 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED D1
+L LED-RESCUE-StepperDriverBob D1
 U 1 1 58CBDE75
 P 2750 5150
 F 0 "D1" V 2830 5100 50  0000 R CNN
@@ -130,28 +122,6 @@ F 3 "" H 3450 5400 50  0000 C CNN
 	1    3450 5400
 	1    0    0    -1  
 $EndComp
-Text GLabel 6000 3850 2    50   Input ~ 0
-~nRESET~
-Text GLabel 6000 2750 2    50   Output ~ 0
-~nHOME~
-Text GLabel 6000 2850 2    50   Input ~ 0
-MODE2
-Text GLabel 6000 2950 2    50   Input ~ 0
-MODE1
-Text GLabel 6000 3050 2    50   Input ~ 0
-MODE0
-Text GLabel 6000 3250 2    50   Input ~ 0
-STEP
-Text GLabel 6000 3350 2    50   Input ~ 0
-nENBL
-Text GLabel 6000 3450 2    50   Input ~ 0
-DIR
-Text GLabel 6000 3550 2    50   Input ~ 0
-DECAY
-Text GLabel 6000 3650 2    50   Output ~ 0
-~nFAULT~
-Text GLabel 6000 3750 2    50   Input ~ 0
-nSLEEP
 $Comp
 L C_Small C7
 U 1 1 58CBFC85
@@ -164,7 +134,7 @@ F 3 "" H 6150 4200 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DRV8825 U1
+L DRV8825-RESCUE-StepperDriverBob U1
 U 1 1 58CBF81D
 P 5450 3300
 F 0 "U1" H 5050 4150 60  0000 C CNN
@@ -268,7 +238,7 @@ U 1 1 58CCA910
 P 4400 4000
 F 0 "R3" H 4430 4020 50  0000 L CNN
 F 1 "50k" H 4430 3960 50  0000 L CNN
-F 2 "Resistors_SMD:R_0603" H 4400 4000 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 4400 4000 50  0001 C CNN
 F 3 "" H 4400 4000 50  0000 C CNN
 	1    4400 4000
 	1    0    0    -1  
@@ -279,7 +249,7 @@ U 1 1 58CCA995
 P 4400 4300
 F 0 "R4" H 4430 4320 50  0000 L CNN
 F 1 "50k" H 4430 4260 50  0000 L CNN
-F 2 "Resistors_SMD:R_0603" H 4400 4300 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 4400 4300 50  0001 C CNN
 F 3 "" H 4400 4300 50  0000 C CNN
 	1    4400 4300
 	1    0    0    -1  
@@ -289,7 +259,7 @@ L Led_Small D2
 U 1 1 58CCCD00
 P 7350 3100
 F 0 "D2" V 7430 3060 50  0000 R CNN
-F 1 "nFAULT" V 7350 3060 50  0000 R CNN
+F 1 "~FAULT~" V 7350 3060 50  0000 R CNN
 F 2 "LEDs:LED_0603" V 7350 3100 50  0001 C CNN
 F 3 "" V 7350 3100 50  0000 C CNN
 	1    7350 3100
@@ -306,8 +276,157 @@ F 3 "" H 7350 2850 50  0000 C CNN
 	1    7350 2850
 	1    0    0    -1  
 $EndComp
-Text GLabel 7350 3250 3    50   Input ~ 0
-nFAULT
+$Comp
+L R_Small R8
+U 1 1 58CD2500
+P 8100 2850
+F 0 "R8" H 8130 2870 50  0000 L CNN
+F 1 "100R" H 8130 2810 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 8100 2850 50  0001 C CNN
+F 3 "" H 8100 2850 50  0000 C CNN
+	1    8100 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Led_Small D3
+U 1 1 58CD3415
+P 8100 3100
+F 0 "D3" V 8180 3060 50  0000 R CNN
+F 1 "~HOME~" V 8100 3060 50  0000 R CNN
+F 2 "LEDs:LED_0603" V 8100 3100 50  0001 C CNN
+F 3 "" V 8100 3100 50  0000 C CNN
+	1    8100 3100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CONN_01X09 P3
+U 1 1 58CD4FF3
+P 10650 3700
+F 0 "P3" H 10650 4200 50  0000 C CNN
+F 1 "CONN_01X09" V 10750 3700 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x09_Pitch2.54mm" H 10650 3700 50  0001 C CNN
+F 3 "" H 10650 3700 50  0000 C CNN
+	1    10650 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR06
+U 1 1 58CE15F3
+P 8100 2700
+F 0 "#PWR06" H 8100 2550 50  0001 C CNN
+F 1 "+3V3" H 8100 2840 50  0000 C CNN
+F 2 "" H 8100 2700 50  0000 C CNN
+F 3 "" H 8100 2700 50  0000 C CNN
+	1    8100 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR07
+U 1 1 58CE178B
+P 7350 2700
+F 0 "#PWR07" H 7350 2550 50  0001 C CNN
+F 1 "+3V3" H 7350 2840 50  0000 C CNN
+F 2 "" H 7350 2700 50  0000 C CNN
+F 3 "" H 7350 2700 50  0000 C CNN
+	1    7350 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR08
+U 1 1 58CE1BDF
+P 6450 3900
+F 0 "#PWR08" H 6450 3750 50  0001 C CNN
+F 1 "+3V3" H 6450 4040 50  0000 C CNN
+F 2 "" H 6450 3900 50  0000 C CNN
+F 3 "" H 6450 3900 50  0000 C CNN
+	1    6450 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR09
+U 1 1 58CE287D
+P 4400 3850
+F 0 "#PWR09" H 4400 3700 50  0001 C CNN
+F 1 "+3V3" H 4400 3990 50  0000 C CNN
+F 2 "" H 4400 3850 50  0000 C CNN
+F 3 "" H 4400 3850 50  0000 C CNN
+	1    4400 3850
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5950 3150
+$Comp
+L CONN_01X04 P4
+U 1 1 58CE360C
+P 10650 4700
+F 0 "P4" H 10650 4950 50  0000 C CNN
+F 1 "CONN_01X04" V 10750 4700 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 10650 4700 50  0001 C CNN
+F 3 "" H 10650 4700 50  0000 C CNN
+	1    10650 4700
+	1    0    0    -1  
+$EndComp
+Text Notes 8000 1800 2    152  ~ 0
+TODO: Fill in proper resistor and capacitor values. Update current draw for 3.3V supply to make sure it doesn't exceede acceptable current draw. 3.3V/100k + the two LED current draws
+$Comp
+L GND #PWR010
+U 1 1 58F27C48
+P 4150 3450
+F 0 "#PWR010" H 4150 3200 50  0001 C CNN
+F 1 "GND" H 4150 3300 50  0000 C CNN
+F 2 "" H 4150 3450 50  0000 C CNN
+F 3 "" H 4150 3450 50  0000 C CNN
+	1    4150 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR011
+U 1 1 58F27C84
+P 4300 3200
+F 0 "#PWR011" H 4300 2950 50  0001 C CNN
+F 1 "GND" H 4300 3050 50  0000 C CNN
+F 2 "" H 4300 3200 50  0000 C CNN
+F 3 "" H 4300 3200 50  0000 C CNN
+	1    4300 3200
+	1    0    0    -1  
+$EndComp
+Text Label 6000 3850 0    60   ~ 0
+~RST~
+Text Label 6000 3750 0    60   ~ 0
+~SLEEP~
+Text Label 6000 3650 0    60   ~ 0
+~FAULT~
+Text Label 6000 3550 0    60   ~ 0
+DECAY
+Text Label 6000 3450 0    60   ~ 0
+DIR
+Text Label 6000 3350 0    60   ~ 0
+~ENBL~
+Text Label 6000 3250 0    60   ~ 0
+STEP
+Text Label 6000 3050 0    60   ~ 0
+MODE0
+Text Label 6000 2950 0    60   ~ 0
+MODE1
+Text Label 6000 2850 0    60   ~ 0
+MODE2
+Text Label 6000 2750 0    60   ~ 0
+~HOME~
+Text Label 6000 2650 0    60   ~ 0
+GND
+Text Label 4950 3050 2    60   ~ 0
+AOUT1
+Text Label 4950 3350 2    60   ~ 0
+BOUT2
+Text Label 4950 3550 2    60   ~ 0
+BOUT1
+Text Label 7350 3250 3    60   ~ 0
+~FAULT~
+Text Label 8100 3250 3    60   ~ 0
+~HOME~
+Text Label 10400 3300 2    60   ~ 0
+~RST~
+Text Label 10400 3400 2    60   ~ 0
+~SLEEP~
 Wire Wire Line
 	4950 2750 4600 2750
 Wire Wire Line
@@ -326,17 +445,17 @@ Wire Wire Line
 Wire Wire Line
 	4600 3750 4950 3750
 Wire Wire Line
-	4950 3550 4900 3550
+	4650 3550 4950 3550
 Wire Wire Line
 	4600 3450 4950 3450
 Wire Wire Line
-	4950 3350 4900 3350
+	4650 3350 4950 3350
 Wire Wire Line
-	4950 3250 4900 3250
+	4650 3250 4950 3250
 Wire Wire Line
 	4600 3150 4950 3150
 Wire Wire Line
-	4950 3050 4900 3050
+	4650 3050 4950 3050
 Wire Wire Line
 	3700 3650 4950 3650
 Wire Wire Line
@@ -368,27 +487,27 @@ Connection ~ 3450 4950
 Wire Wire Line
 	3200 4950 3750 4950
 Wire Wire Line
-	5950 2750 6000 2750
+	5950 2750 6300 2750
 Wire Wire Line
-	5950 2850 6000 2850
+	5950 2850 6300 2850
 Wire Wire Line
-	5950 2950 6000 2950
+	5950 2950 6300 2950
 Wire Wire Line
-	5950 3050 6000 3050
+	5950 3050 6300 3050
 Wire Wire Line
-	5950 3250 6000 3250
+	5950 3250 6300 3250
 Wire Wire Line
-	5950 3350 6000 3350
+	5950 3350 6300 3350
 Wire Wire Line
-	5950 3450 6000 3450
+	5950 3450 6300 3450
 Wire Wire Line
-	5950 3550 6000 3550
+	5950 3550 6300 3550
 Wire Wire Line
-	5950 3650 6000 3650
+	5950 3650 6300 3650
 Wire Wire Line
-	5950 3750 6000 3750
+	5950 3750 6300 3750
 Wire Wire Line
-	5950 3850 6000 3850
+	5950 3850 6300 3850
 Wire Wire Line
 	5950 3950 6450 3950
 Connection ~ 6000 3950
@@ -458,185 +577,68 @@ Wire Wire Line
 	7350 2750 7350 2700
 Wire Wire Line
 	7350 3000 7350 2950
-$Comp
-L R_Small R8
-U 1 1 58CD2500
-P 8100 2850
-F 0 "R8" H 8130 2870 50  0000 L CNN
-F 1 "100R" H 8130 2810 50  0000 L CNN
-F 2 "Resistors_SMD:R_0603" H 8100 2850 50  0001 C CNN
-F 3 "" H 8100 2850 50  0000 C CNN
-	1    8100 2850
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8100 2750 8100 2700
-$Comp
-L Led_Small D3
-U 1 1 58CD3415
-P 8100 3100
-F 0 "D3" V 8180 3060 50  0000 R CNN
-F 1 "nHOME" V 8100 3060 50  0000 R CNN
-F 2 "LEDs:LED_0603" V 8100 3100 50  0001 C CNN
-F 3 "" V 8100 3100 50  0000 C CNN
-	1    8100 3100
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	8100 2950 8100 3000
-Text GLabel 8100 3250 3    50   Input ~ 0
-nHOME
-$Comp
-L CONN_01X09 P3
-U 1 1 58CD4FF3
-P 10650 3700
-F 0 "P3" H 10650 4200 50  0000 C CNN
-F 1 "CONN_01X09" V 10750 3700 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x09_Pitch2.54mm" H 10650 3700 50  0001 C CNN
-F 3 "" H 10650 3700 50  0000 C CNN
-	1    10650 3700
-	1    0    0    -1  
-$EndComp
-Text GLabel 10400 3300 0    50   Output ~ 0
-~nRESET~
-Text GLabel 10400 3400 0    50   Output ~ 0
-nSLEEP
-Text GLabel 10400 3500 0    50   Output ~ 0
-DECAY
-Text GLabel 10400 3600 0    50   Output ~ 0
-DIR
-Text GLabel 10400 3700 0    50   Output ~ 0
-nENBL
-Text GLabel 10400 3800 0    50   Output ~ 0
-STEP
-Text GLabel 10400 3900 0    50   Output ~ 0
-MODE0
-Text GLabel 10400 4000 0    50   Output ~ 0
-MODE1
-Text GLabel 10400 4100 0    50   Output ~ 0
-MODE2
 Wire Wire Line
-	10400 3300 10450 3300
+	10100 3300 10450 3300
 Wire Wire Line
-	10450 3400 10400 3400
+	10100 3400 10450 3400
 Wire Wire Line
-	10450 3500 10400 3500
+	10100 3500 10450 3500
 Wire Wire Line
-	10450 3600 10400 3600
+	10050 4550 10450 4550
 Wire Wire Line
-	10450 3700 10400 3700
+	10050 4650 10450 4650
 Wire Wire Line
-	10400 3800 10450 3800
+	7350 3200 7350 3550
 Wire Wire Line
-	10450 3900 10400 3900
-Wire Wire Line
-	10450 4000 10400 4000
-Wire Wire Line
-	10400 4100 10450 4100
-$Comp
-L +3V3 #PWR06
-U 1 1 58CE15F3
-P 8100 2700
-F 0 "#PWR06" H 8100 2550 50  0001 C CNN
-F 1 "+3V3" H 8100 2840 50  0000 C CNN
-F 2 "" H 8100 2700 50  0000 C CNN
-F 3 "" H 8100 2700 50  0000 C CNN
-	1    8100 2700
-	1    0    0    -1  
-$EndComp
-$Comp
-L +3V3 #PWR07
-U 1 1 58CE178B
-P 7350 2700
-F 0 "#PWR07" H 7350 2550 50  0001 C CNN
-F 1 "+3V3" H 7350 2840 50  0000 C CNN
-F 2 "" H 7350 2700 50  0000 C CNN
-F 3 "" H 7350 2700 50  0000 C CNN
-	1    7350 2700
-	1    0    0    -1  
-$EndComp
-$Comp
-L +3V3 #PWR08
-U 1 1 58CE1BDF
-P 6450 3900
-F 0 "#PWR08" H 6450 3750 50  0001 C CNN
-F 1 "+3V3" H 6450 4040 50  0000 C CNN
-F 2 "" H 6450 3900 50  0000 C CNN
-F 3 "" H 6450 3900 50  0000 C CNN
-	1    6450 3900
-	1    0    0    -1  
-$EndComp
-$Comp
-L +3V3 #PWR09
-U 1 1 58CE287D
-P 4400 3850
-F 0 "#PWR09" H 4400 3700 50  0001 C CNN
-F 1 "+3V3" H 4400 3990 50  0000 C CNN
-F 2 "" H 4400 3850 50  0000 C CNN
-F 3 "" H 4400 3850 50  0000 C CNN
-	1    4400 3850
-	1    0    0    -1  
-$EndComp
-NoConn ~ 5950 3150
-$Comp
-L CONN_01X04 P4
-U 1 1 58CE360C
-P 10650 4700
-F 0 "P4" H 10650 4950 50  0000 C CNN
-F 1 "CONN_01X04" V 10750 4700 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 10650 4700 50  0001 C CNN
-F 3 "" H 10650 4700 50  0000 C CNN
-	1    10650 4700
-	1    0    0    -1  
-$EndComp
-Text GLabel 10400 4550 0    50   Input ~ 0
-AOUT1
-Text GLabel 10400 4650 0    50   Input ~ 0
-AOUT2
-Text GLabel 10400 4750 0    50   Input ~ 0
-BOUT2
-Text GLabel 10400 4850 0    50   Input ~ 0
-BOUT1
-Wire Wire Line
-	10400 4550 10450 4550
-Wire Wire Line
-	10400 4650 10450 4650
-Text Notes 8000 1800 2    152  ~ 0
-TODO: Fill in proper resistor and capacitor values. Update current draw for 3.3V supply to make sure it doesn't exceede acceptable current draw. 3.3V/100k + the two LED current draws
-Wire Wire Line
-	7350 3200 7350 3250
-Wire Wire Line
-	8100 3200 8100 3250
+	8100 3200 8100 3550
 Wire Wire Line
 	3450 3300 3450 3350
-$Comp
-L GND #PWR010
-U 1 1 58F27C48
-P 4150 3450
-F 0 "#PWR010" H 4150 3200 50  0001 C CNN
-F 1 "GND" H 4150 3300 50  0000 C CNN
-F 2 "" H 4150 3450 50  0000 C CNN
-F 3 "" H 4150 3450 50  0000 C CNN
-	1    4150 3450
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR011
-U 1 1 58F27C84
-P 4300 3200
-F 0 "#PWR011" H 4300 2950 50  0001 C CNN
-F 1 "GND" H 4300 3050 50  0000 C CNN
-F 2 "" H 4300 3200 50  0000 C CNN
-F 3 "" H 4300 3200 50  0000 C CNN
-	1    4300 3200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4400 3150 4300 3150
 Wire Wire Line
 	4300 3150 4300 3200
 Wire Wire Line
-	10400 4750 10450 4750
+	10050 4750 10450 4750
 Wire Wire Line
-	10400 4850 10450 4850
+	10050 4850 10450 4850
+Text Label 10400 3500 2    60   ~ 0
+DECAY
+Text Label 10400 3600 2    60   ~ 0
+DIR
+Text Label 10400 3700 2    60   ~ 0
+~ENBL~
+Wire Wire Line
+	10100 3600 10450 3600
+Wire Wire Line
+	10100 3700 10450 3700
+Wire Wire Line
+	10100 3800 10450 3800
+Text Label 10400 3800 2    60   ~ 0
+STEP
+Text Label 10400 3900 2    60   ~ 0
+MODE0
+Text Label 10400 4000 2    60   ~ 0
+MODE1
+Wire Wire Line
+	10100 3900 10450 3900
+Wire Wire Line
+	10100 4000 10450 4000
+Wire Wire Line
+	10100 4100 10450 4100
+Text Label 10400 4100 2    60   ~ 0
+MODE2
+Text Label 10350 4550 2    60   ~ 0
+AOUT1
+Text Label 10350 4650 2    60   ~ 0
+A0UT2
+Text Label 10350 4750 2    60   ~ 0
+BOUT2
+Text Label 10350 4850 2    60   ~ 0
+BOUT1
+Text Label 4950 3250 2    60   ~ 0
+A0UT2
 $EndSCHEMATC
