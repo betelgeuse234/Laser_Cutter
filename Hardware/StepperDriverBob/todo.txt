@@ -1,0 +1,4 @@
+1) Remove Blue LEDS and replace with pull up resistors
+2) Replace 100ohm resistors with 600ohm resistors for power led
+3) Order cap with higher voltage rating(the one I selected was 10V)
+4) Order different headers for 11 pins(2.54mm spacing)
