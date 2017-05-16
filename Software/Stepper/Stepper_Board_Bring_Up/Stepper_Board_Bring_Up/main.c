@@ -6,10 +6,15 @@
  */ 
 
 #define F_CPU		16000000UL	// Clock speed for delay.h
+#define BAUD 9600
+#define MYUBRR F_CPU/16/BAUD-1
 
 /* Includes */
 #include <avr/io.h>
+#include <avr/interrupt.h>
+#include <stdio.h>
 #include "util/delay.h"
+#include "uart.h"
 
 /* GPIO Definitions */
 #define DIR_PIN		PORTB6	// Arduino Uno pin 13
@@ -22,45 +27,83 @@
 
 /* Function Declarations */
 void system_init(void);
+void velocity_timer_init(void);
+void accel_timer_init(void);
+void usart_setup(void);
+
+unsigned int count;
+
+//his is an interrupt that is triggered from output compare A on timer 0
+ISR(TIMER1_COMPA_vect)
+{	
+	count++;
+	if(OCR0A > 25)
+	{
+		PORTB ^= _BV(0);
+		OCR0A = OCR0A - 5;									//Frequency of PWM = 2 * OCR1A/(16000000/PRESCALAR)		
+	}
+}
 
 int main(void)
 {
-    system_init();
-    while (1) 
-    {
-		// Ramp up/down stepper motor
-		for (uint8_t i=0; i<255; i++)
-		{
-			PWM_OCR = i;
-			_delay_ms(10);
-		}
-		for (uint8_t i=255; i>0; i--)
-		{
-			PWM_OCR = i;
-			_delay_ms(10);
-		}
-		_delay_ms(2000);	// Delay 2 seconds between ramp up/down
-    }
+	cli();
+	count = 0;
+	system_init();
+	sei();
+  
+	while(1)
+	{
+//		printf("%d", count);
+	}
 }
 
 void system_init(void)
 {
 	/* Initialize GPIO */
-	DIR_DDR |= (1<<DIR_PIN);	// Enable pullups on DIR output
-	PWM_DDR |= (1<<PWM_PIN);	// Enable pullups on PWM output
-	DIR_PORT |= (1<<DIR_PIN);	// Set default direction to TBD (depends on hardware configuration)
-	PWM_PORT &= ~(1<<PWM_PIN);	// Set initial level to logic low (no motor spinning)
+	DDRB = _BV(5) | _BV(1) | _BV(0);	// PB2 and PB5 outputs
+	PORTB = _BV(5) | _BV(0);			// Set PB5 high
+	DDRD = _BV(6);
 	
-	/* Initialize Timer 
-	 Output Compare 2 on PORTD3 (PWM_PIN) from TC2
-	  - 8 bit compare unit B
-	  - no interrupt
-	  - starting OC2B == 0
-	  - timer rate == 62.5 kHz
-	  - Fast PWM
-	*/
-	PWM_OCR = 0;						// Set initial level to 0
-	TCCR1B |= (1<<COM2B1);				// Clear PWM output on match, set PWM output @ bottom (OC2B = ticks_high / 256)
-	TCCR1B |= (1<<WGM21) | (1<<WGM20);	// Set Timer 2 for Fast PWM mode	
-	TCCR2B |= (1<<CS22) | (1<<CS21);	// Set Timer for clk/256 == 62500 Hz (w/16 MHz clk in)	
+	//usart_setup();
+	
+	// Setup Timer to operate PWM
+	accel_timer_init();
+	velocity_timer_init();
+}
+
+/*This function initializes timer1 in CTC mode with a prescalar of 0.
+ *The interrupt is set up to trigger off OCR0A every 1ms.
+ *Input:  N/a
+ *Output: N/a
+ */
+void velocity_timer_init(void)
+{
+     
+	TCCR0A = _BV(COM0A0) | _BV(WGM00); //Set WGM to mode 11
+	TCCR0B = _BV(WGM02) | _BV(CS02) | _BV(CS00);    //Prescaler of 1024
+    OCR0A = 255;									//Frequency of PWM = 2 * OCR1A/(16000000/PRESCALAR)
+	TCNT0 = 0; 
+}
+
+
+/*This function initializes timer1 in CTC mode with a prescalar of 0.
+ *The interrupt is set up to trigger off OCR0A every 1ms.
+ *Input:  N/a
+ *Output: N/a
+ */
+void accel_timer_init(void)
+{
+     
+	TCCR1A = _BV(WGM12); //Set WGM to mode 11
+	TCCR1B = _BV(CS12) | _BV(CS10);    //Prescaler of 1024
+    OCR1A = 32000;									//Frequency of PWM = 2 * OCR1A/(16000000/PRESCALAR)
+	TCNT1 = 0; 
+	TIMSK1 = _BV(OCIE1A);           //Enable timer interrupts
+}
+
+void usart_setup(void)
+{
+	USART_Init(MYUBRR);
+	stdout = &uart_output;
+	stdin  = &uart_input;
 }

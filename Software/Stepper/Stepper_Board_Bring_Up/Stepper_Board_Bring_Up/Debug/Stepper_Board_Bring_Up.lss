@@ -3,60 +3,62 @@ Stepper_Board_Bring_Up.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .data         00000000  00800100  00800100  00000144  2**0
+  0 .data         00000000  00800100  00800100  000001c0  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  1 .text         000000f0  00000000  00000000  00000054  2**1
+  1 .text         0000014c  00000000  00000000  00000074  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .comment      00000030  00000000  00000000  00000144  2**0
+  2 .bss          00000002  00800100  00800100  000001c0  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000001c0  2**0
                   CONTENTS, READONLY
-  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000174  2**2
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000001f0  2**2
                   CONTENTS, READONLY
-  4 .debug_aranges 00000028  00000000  00000000  000001b4  2**0
+  5 .debug_aranges 00000048  00000000  00000000  00000230  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   000007c2  00000000  00000000  000001dc  2**0
+  6 .debug_info   00000866  00000000  00000000  00000278  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 000006c7  00000000  00000000  0000099e  2**0
+  7 .debug_abbrev 0000071e  00000000  00000000  00000ade  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   000002d7  00000000  00000000  00001065  2**0
+  8 .debug_line   000002dc  00000000  00000000  000011fc  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  00000034  00000000  00000000  0000133c  2**2
+  9 .debug_frame  00000088  00000000  00000000  000014d8  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    000003c8  00000000  00000000  00001370  2**0
+ 10 .debug_str    00000415  00000000  00000000  00001560  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    000000d3  00000000  00000000  00001738  2**0
+ 11 .debug_loc    00000049  00000000  00000000  00001975  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000018  00000000  00000000  0000180b  2**0
+ 12 .debug_ranges 00000038  00000000  00000000  000019be  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
 
 00000000 <__vectors>:
    0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
-   4:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-   8:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-   c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  10:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  14:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  18:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  1c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  20:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  24:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  28:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  2c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  30:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  34:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  38:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  3c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  40:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  44:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  48:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  4c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  50:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  54:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  58:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  5c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  60:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  64:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+   4:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+   8:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+   c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  10:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  14:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  18:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  1c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  20:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  24:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  28:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  2c:	0c 94 53 00 	jmp	0xa6	; 0xa6 <__vector_11>
+  30:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  34:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  38:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  3c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  40:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  44:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  48:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  4c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  50:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  54:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  58:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  5c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  60:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  64:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
 
 00000068 <__ctors_end>:
   68:	11 24       	eor	r1, r1
@@ -65,132 +67,176 @@ Disassembly of section .text:
   6e:	d8 e0       	ldi	r29, 0x08	; 8
   70:	de bf       	out	0x3e, r29	; 62
   72:	cd bf       	out	0x3d, r28	; 61
-  74:	0e 94 54 00 	call	0xa8	; 0xa8 <main>
-  78:	0c 94 76 00 	jmp	0xec	; 0xec <_exit>
 
-0000007c <__bad_interrupt>:
-  7c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+00000074 <__do_copy_data>:
+  74:	11 e0       	ldi	r17, 0x01	; 1
+  76:	a0 e0       	ldi	r26, 0x00	; 0
+  78:	b1 e0       	ldi	r27, 0x01	; 1
+  7a:	ec e4       	ldi	r30, 0x4C	; 76
+  7c:	f1 e0       	ldi	r31, 0x01	; 1
+  7e:	02 c0       	rjmp	.+4      	; 0x84 <__do_copy_data+0x10>
+  80:	05 90       	lpm	r0, Z+
+  82:	0d 92       	st	X+, r0
+  84:	a0 30       	cpi	r26, 0x00	; 0
+  86:	b1 07       	cpc	r27, r17
+  88:	d9 f7       	brne	.-10     	; 0x80 <__do_copy_data+0xc>
 
-00000080 <system_init>:
+0000008a <__do_clear_bss>:
+  8a:	21 e0       	ldi	r18, 0x01	; 1
+  8c:	a0 e0       	ldi	r26, 0x00	; 0
+  8e:	b1 e0       	ldi	r27, 0x01	; 1
+  90:	01 c0       	rjmp	.+2      	; 0x94 <.do_clear_bss_start>
+
+00000092 <.do_clear_bss_loop>:
+  92:	1d 92       	st	X+, r1
+
+00000094 <.do_clear_bss_start>:
+  94:	a2 30       	cpi	r26, 0x02	; 2
+  96:	b2 07       	cpc	r27, r18
+  98:	e1 f7       	brne	.-8      	; 0x92 <.do_clear_bss_loop>
+  9a:	0e 94 9b 00 	call	0x136	; 0x136 <main>
+  9e:	0c 94 a4 00 	jmp	0x148	; 0x148 <_exit>
+
+000000a2 <__bad_interrupt>:
+  a2:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000a6 <__vector_11>:
+
+unsigned int count;
+
+//his is an interrupt that is triggered from output compare A on timer 0
+ISR(TIMER1_COMPA_vect)
+{	
+  a6:	1f 92       	push	r1
+  a8:	0f 92       	push	r0
+  aa:	0f b6       	in	r0, 0x3f	; 63
+  ac:	0f 92       	push	r0
+  ae:	11 24       	eor	r1, r1
+  b0:	8f 93       	push	r24
+  b2:	9f 93       	push	r25
+	count++;
+  b4:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_end>
+  b8:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__data_end+0x1>
+  bc:	01 96       	adiw	r24, 0x01	; 1
+  be:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <__data_end+0x1>
+  c2:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_end>
+	if(OCR0A > 25)
+  c6:	87 b5       	in	r24, 0x27	; 39
+  c8:	8a 31       	cpi	r24, 0x1A	; 26
+  ca:	38 f0       	brcs	.+14     	; 0xda <__vector_11+0x34>
+	{
+		PORTB ^= _BV(0);
+  cc:	95 b1       	in	r25, 0x05	; 5
+  ce:	81 e0       	ldi	r24, 0x01	; 1
+  d0:	89 27       	eor	r24, r25
+  d2:	85 b9       	out	0x05, r24	; 5
+		OCR0A = OCR0A - 5;									//Frequency of PWM = 2 * OCR1A/(16000000/PRESCALAR)		
+  d4:	87 b5       	in	r24, 0x27	; 39
+  d6:	85 50       	subi	r24, 0x05	; 5
+  d8:	87 bd       	out	0x27, r24	; 39
+	}
+}
+  da:	9f 91       	pop	r25
+  dc:	8f 91       	pop	r24
+  de:	0f 90       	pop	r0
+  e0:	0f be       	out	0x3f, r0	; 63
+  e2:	0f 90       	pop	r0
+  e4:	1f 90       	pop	r1
+  e6:	18 95       	reti
+
+000000e8 <velocity_timer_init>:
+ *Output: N/a
+ */
+void velocity_timer_init(void)
+{
+     
+	TCCR0A = _BV(COM0A0) | _BV(WGM00); //Set WGM to mode 11
+  e8:	81 e4       	ldi	r24, 0x41	; 65
+  ea:	84 bd       	out	0x24, r24	; 36
+	TCCR0B = _BV(WGM02) | _BV(CS02) | _BV(CS00);    //Prescaler of 1024
+  ec:	8d e0       	ldi	r24, 0x0D	; 13
+  ee:	85 bd       	out	0x25, r24	; 37
+    OCR0A = 255;									//Frequency of PWM = 2 * OCR1A/(16000000/PRESCALAR)
+  f0:	8f ef       	ldi	r24, 0xFF	; 255
+  f2:	87 bd       	out	0x27, r24	; 39
+	TCNT0 = 0; 
+  f4:	16 bc       	out	0x26, r1	; 38
+  f6:	08 95       	ret
+
+000000f8 <accel_timer_init>:
+ *Output: N/a
+ */
+void accel_timer_init(void)
+{
+     
+	TCCR1A = _BV(WGM12); //Set WGM to mode 11
+  f8:	88 e0       	ldi	r24, 0x08	; 8
+  fa:	80 93 80 00 	sts	0x0080, r24	; 0x800080 <__TEXT_REGION_LENGTH__+0x7e0080>
+	TCCR1B = _BV(CS12) | _BV(CS10);    //Prescaler of 1024
+  fe:	85 e0       	ldi	r24, 0x05	; 5
+ 100:	80 93 81 00 	sts	0x0081, r24	; 0x800081 <__TEXT_REGION_LENGTH__+0x7e0081>
+    OCR1A = 32000;									//Frequency of PWM = 2 * OCR1A/(16000000/PRESCALAR)
+ 104:	80 e0       	ldi	r24, 0x00	; 0
+ 106:	9d e7       	ldi	r25, 0x7D	; 125
+ 108:	90 93 89 00 	sts	0x0089, r25	; 0x800089 <__TEXT_REGION_LENGTH__+0x7e0089>
+ 10c:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__TEXT_REGION_LENGTH__+0x7e0088>
+	TCNT1 = 0; 
+ 110:	10 92 85 00 	sts	0x0085, r1	; 0x800085 <__TEXT_REGION_LENGTH__+0x7e0085>
+ 114:	10 92 84 00 	sts	0x0084, r1	; 0x800084 <__TEXT_REGION_LENGTH__+0x7e0084>
+	TIMSK1 = _BV(OCIE1A);           //Enable timer interrupts
+ 118:	82 e0       	ldi	r24, 0x02	; 2
+ 11a:	80 93 6f 00 	sts	0x006F, r24	; 0x80006f <__TEXT_REGION_LENGTH__+0x7e006f>
+ 11e:	08 95       	ret
+
+00000120 <system_init>:
 }
 
 void system_init(void)
 {
 	/* Initialize GPIO */
-	DIR_DDR |= (1<<DIR_PIN);	// Enable pullups on DIR output
-  80:	26 9a       	sbi	0x04, 6	; 4
-	PWM_DDR |= (1<<PWM_PIN);	// Enable pullups on PWM output
-  82:	53 9a       	sbi	0x0a, 3	; 10
-	DIR_PORT |= (1<<DIR_PIN);	// Set default direction to TBD (depends on hardware configuration)
-  84:	2e 9a       	sbi	0x05, 6	; 5
-	PWM_PORT &= ~(1<<PWM_PIN);	// Set initial level to logic low (no motor spinning)
-  86:	5b 98       	cbi	0x0b, 3	; 11
-	  - no interrupt
-	  - starting OC2B == 0
-	  - timer rate == 62.5 kHz
-	  - Fast PWM
-	*/
-	PWM_OCR = 0;						// Set initial level to 0
-  88:	10 92 b4 00 	sts	0x00B4, r1	; 0x8000b4 <__TEXT_REGION_LENGTH__+0x7e00b4>
-	TCCR1B |= (1<<COM2B1);				// Clear PWM output on match, set PWM output @ bottom (OC2B = ticks_high / 256)
-  8c:	e1 e8       	ldi	r30, 0x81	; 129
-  8e:	f0 e0       	ldi	r31, 0x00	; 0
-  90:	80 81       	ld	r24, Z
-  92:	80 62       	ori	r24, 0x20	; 32
-  94:	80 83       	st	Z, r24
-	TCCR1B |= (1<<WGM21) | (1<<WGM20);	// Set Timer 2 for Fast PWM mode	
-  96:	80 81       	ld	r24, Z
-  98:	83 60       	ori	r24, 0x03	; 3
-  9a:	80 83       	st	Z, r24
-	TCCR2B |= (1<<CS22) | (1<<CS21);	// Set Timer for clk/256 == 62500 Hz (w/16 MHz clk in)	
-  9c:	e1 eb       	ldi	r30, 0xB1	; 177
-  9e:	f0 e0       	ldi	r31, 0x00	; 0
-  a0:	80 81       	ld	r24, Z
-  a2:	86 60       	ori	r24, 0x06	; 6
-  a4:	80 83       	st	Z, r24
-  a6:	08 95       	ret
+	DDRB = _BV(5) | _BV(1) | _BV(0);	// PB2 and PB5 outputs
+ 120:	83 e2       	ldi	r24, 0x23	; 35
+ 122:	84 b9       	out	0x04, r24	; 4
+	PORTB = _BV(5) | _BV(0);			// Set PB5 high
+ 124:	81 e2       	ldi	r24, 0x21	; 33
+ 126:	85 b9       	out	0x05, r24	; 5
+	DDRD = _BV(6);
+ 128:	80 e4       	ldi	r24, 0x40	; 64
+ 12a:	8a b9       	out	0x0a, r24	; 10
+	
+	//usart_setup();
+	
+	// Setup Timer to operate PWM
+	accel_timer_init();
+ 12c:	0e 94 7c 00 	call	0xf8	; 0xf8 <accel_timer_init>
+	velocity_timer_init();
+ 130:	0e 94 74 00 	call	0xe8	; 0xe8 <velocity_timer_init>
+ 134:	08 95       	ret
 
-000000a8 <main>:
-/* Function Declarations */
-void system_init(void);
+00000136 <main>:
+	}
+}
 
 int main(void)
 {
-    system_init();
-  a8:	0e 94 40 00 	call	0x80	; 0x80 <system_init>
-    while (1) 
-    {
-		// Ramp up/down stepper motor
-		for (uint8_t i=0; i<255; i++)
-		{
-			PWM_OCR = i;
-  ac:	e4 eb       	ldi	r30, 0xB4	; 180
-  ae:	f0 e0       	ldi	r31, 0x00	; 0
-{
-    system_init();
-    while (1) 
-    {
-		// Ramp up/down stepper motor
-		for (uint8_t i=0; i<255; i++)
-  b0:	80 e0       	ldi	r24, 0x00	; 0
-		{
-			PWM_OCR = i;
-  b2:	80 83       	st	Z, r24
-	#else
-		//round up by default
-		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
-	#endif
+	cli();
+ 136:	f8 94       	cli
+	count = 0;
+ 138:	10 92 01 01 	sts	0x0101, r1	; 0x800101 <__data_end+0x1>
+ 13c:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__data_end>
+	system_init();
+ 140:	0e 94 90 00 	call	0x120	; 0x120 <system_init>
+	sei();
+ 144:	78 94       	sei
+  
+	while(1)
+	{
+//		printf("%d", count);
+	}
+ 146:	ff cf       	rjmp	.-2      	; 0x146 <main+0x10>
 
-	__builtin_avr_delay_cycles(__ticks_dc);
-  b4:	af e3       	ldi	r26, 0x3F	; 63
-  b6:	bc e9       	ldi	r27, 0x9C	; 156
-  b8:	11 97       	sbiw	r26, 0x01	; 1
-  ba:	f1 f7       	brne	.-4      	; 0xb8 <main+0x10>
-  bc:	00 c0       	rjmp	.+0      	; 0xbe <main+0x16>
-  be:	00 00       	nop
-{
-    system_init();
-    while (1) 
-    {
-		// Ramp up/down stepper motor
-		for (uint8_t i=0; i<255; i++)
-  c0:	8f 5f       	subi	r24, 0xFF	; 255
-  c2:	8f 3f       	cpi	r24, 0xFF	; 255
-  c4:	b1 f7       	brne	.-20     	; 0xb2 <main+0xa>
-			PWM_OCR = i;
-			_delay_ms(10);
-		}
-		for (uint8_t i=255; i>0; i--)
-		{
-			PWM_OCR = i;
-  c6:	80 83       	st	Z, r24
-  c8:	af e3       	ldi	r26, 0x3F	; 63
-  ca:	bc e9       	ldi	r27, 0x9C	; 156
-  cc:	11 97       	sbiw	r26, 0x01	; 1
-  ce:	f1 f7       	brne	.-4      	; 0xcc <main+0x24>
-  d0:	00 c0       	rjmp	.+0      	; 0xd2 <main+0x2a>
-  d2:	00 00       	nop
-		for (uint8_t i=0; i<255; i++)
-		{
-			PWM_OCR = i;
-			_delay_ms(10);
-		}
-		for (uint8_t i=255; i>0; i--)
-  d4:	81 50       	subi	r24, 0x01	; 1
-  d6:	b9 f7       	brne	.-18     	; 0xc6 <main+0x1e>
-  d8:	bf ef       	ldi	r27, 0xFF	; 255
-  da:	27 ea       	ldi	r18, 0xA7	; 167
-  dc:	81 e6       	ldi	r24, 0x61	; 97
-  de:	b1 50       	subi	r27, 0x01	; 1
-  e0:	20 40       	sbci	r18, 0x00	; 0
-  e2:	80 40       	sbci	r24, 0x00	; 0
-  e4:	e1 f7       	brne	.-8      	; 0xde <main+0x36>
-  e6:	00 c0       	rjmp	.+0      	; 0xe8 <main+0x40>
-  e8:	00 00       	nop
-  ea:	e2 cf       	rjmp	.-60     	; 0xb0 <main+0x8>
+00000148 <_exit>:
+ 148:	f8 94       	cli
 
-000000ec <_exit>:
-  ec:	f8 94       	cli
-
-000000ee <__stop_program>:
-  ee:	ff cf       	rjmp	.-2      	; 0xee <__stop_program>
+0000014a <__stop_program>:
+ 14a:	ff cf       	rjmp	.-2      	; 0x14a <__stop_program>
