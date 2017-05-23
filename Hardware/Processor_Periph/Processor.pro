@@ -1,4 +1,4 @@
-update=4/30/2017 6:46:02 PM
+update=5/22/2017 11:31:42 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -68,7 +68,7 @@ PageLayoutDescrFile=C:/Users/jfrit/Documents/GitHub/Laser_Cutter/Hardware/KiCad/
 PlotDirectoryName=PDFs/
 SubpartIdSeparator=0
 SubpartFirstId=65
-NetFmtName=
+NetFmtName=Pcbnew
 SpiceAjustPassiveValues=0
 LabSize=59
 ERC_TestSimilarLabels=1
