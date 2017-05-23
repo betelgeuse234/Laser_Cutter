@@ -1,4 +1,4 @@
-update=3/18/2017 8:15:23 PM
+update=5/21/2017 2:51:23 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,21 +25,11 @@ version=1
 NetIExt=net
 [general]
 version=1
-[schematic_editor]
-version=1
-PageLayoutDescrFile=C:/Users/John/Documents/Products/Laser_Cutter/Hardware/KiCad/default_layout.kicad_wks
-PlotDirectoryName=PDFs/
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceAjustPassiveValues=0
-LabSize=60
-ERC_TestSimilarLabels=1
 [eeschema]
 version=1
-LibDir=../KiCad/Sch_Lib;../KiCad/Sch_Lib
+LibDir=
 [eeschema/libraries]
-LibName1=Processor-rescue
+LibName1=StepperDriverBob-rescue
 LibName2=power
 LibName3=device
 LibName4=transistors
@@ -69,5 +59,14 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
-LibName31=C:/Users/John/Documents/Products/Laser_Cutter/Hardware/KiCad/Sch_Lib/common
-LibName32=C:/Users/John/Documents/Products/KiCAD_Common/newFritzLib
+LibName31=drv8825
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
